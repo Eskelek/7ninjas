@@ -1,0 +1,361 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Lato', sans-serif
+
+$gray: #949494
+$lightGray: #bcbcbc
+$ninjaRed: #e2393e
+
+body
+    background: $ninjaRed
+    #root
+        .MainComponent
+            position: relative
+            header
+                text-align: center
+                background: #fff
+                height: 450px
+                h1
+                    font-size: 36px
+                    letter-spacing: 3px
+                    span
+                        color: $ninjaRed
+                img
+                    width: 300px
+            .toCart
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                top: 70%
+                width: 110px
+                height: 40px
+                font-size: 20px
+                cursor: pointer
+            .shipping
+                height: 550px
+            .cartWindow
+                background: #fff
+                position: absolute
+                top: 280px
+                right: 0
+                width: 80vw
+                box-shadow: 0 0 40px rgba(0,0,0, .2)
+                form
+                    height: 350px
+                    width: 460px
+                    position: relative
+                    padding: 40px 0 0 70px
+                    button
+                        bottom: 0
+                        right: 0
+                        position: absolute
+                        cursor: pointer
+                        width: 110px
+                        height: 40px
+                        margin: 10px 0
+                    .formCell
+                        margin: 10px 0
+                        height: 40px
+                        p,input
+                            display: inline-block
+                        p
+                            font-size: 22px
+                            width: 170px
+                        input, select
+                            padding: 0 10px
+                            color: $gray
+                            border-radius: 2px
+                            width: 220px
+                            height: 28px
+                            border: 1px solid rgba(0,0,0, .1)
+                        label
+                            margin-left: 170px
+                            color: #ec1a3b
+                            font-weight: 100
+                            font-size: 14px
+                .summary
+                    text-align: right
+                    padding: 0 30px
+                    p
+                        font-size: 30px
+                        letter-spacing: 2px
+                    button
+                        cursor: pointer
+                        width: 110px
+                        height: 40px
+                        margin: 10px 0
+                .listOfCats
+                    background: #fff
+                    .catBoner
+                        width: 90%
+                        border-bottom: 1px solid rgba(0,0,0, .1)
+                        margin-left: 4%
+                        display: inline-block
+                        .column
+                            height: 140px
+                            vertical-align: top
+                            margin: 10px
+                            display: inline-block
+                            span
+                                padding: 5px
+                                display: block
+                        .price
+                            position: absolute
+                            top: 0
+                            right: 0
+                            width: 35%
+                            border-left: 1px solid rgba(0,0,0, .1)
+                            .column
+                                vertical-align: middle
+                                span
+                                    display: inline-block
+                                    margin: 30px 5px 0 0
+                                    &:last-of-type
+                                        text-align: center
+                    .catForSale
+                        margin-left: 2.5vw
+                        width: 75vw
+                        border-bottom: 1px solid rgba(0,0,0, .1)
+                        height: 170px
+                        position: relative
+                        .catInfo
+                            width: 700px
+                            height: 100%
+                            display: inline-block
+                            .catDescription
+                                padding: 10px 20px
+                                vertical-align: top
+                                display: inline-block
+                                h2
+                                    padding: 10px 0 15px
+                                p
+                                    font-size: 16px
+                                    width: 400px
+                            img
+                                display: inline-block
+                                padding: 0
+                                width: 120px
+                                margin: 20px 0 0 20px
+                        .catPriceCreator
+                            width: 300px
+                            position: absolute
+                            top: 0
+                            right: 0
+                            vertical-align: top
+                            height: 100%
+                            display: inline-block
+                            .far
+                                cursor: pointer
+                                color: #bcbcbc
+                                position: absolute
+                                top: 20px
+                                right: 35px
+                            .quantityAndPrice
+                                margin-top: 15px
+                                height: 140px
+                                padding-left: 30px
+                                border-left: 1px solid rgba(0,0,0, .1)
+                                width: 200px
+                                .quantity
+                                    display: inline-block
+                                    button,p
+                                        color: $gray
+                                        display: inline-block
+                                        font-size: 20px
+                                        padding: 0 10px
+                                        margin-top: 50px
+                                    button
+                                        background: #fff
+                                        font-weight: 100
+                                        color: $gray
+                                        cursor: pointer
+                                        height: 35px
+                                        width: 35px
+                                        border-radius: 3px
+                                        border: 1px solid $lightGray
+                                .priceForRow
+                                    position: absolute
+                                    font-size: 24px
+                                    right: 40px
+                                    top: 50%
+                                    transform: translateY(-50%)
+                                    display: inline-block
+                                    
+                                    
+@media (max-width: 1100px)
+    body
+        #root 
+            .MainComponent
+                .cartWindow 
+                    width: 90vw
+                    .listOfCats
+                        .catForSale
+                            width: 85vw
+                            .catInfo
+                                .catDescription
+                                    p
+                                        width: 270px
+                                        font-size: 15px
+@media (max-width: 850px)
+    body
+        #root 
+            .MainComponent
+                .cartWindow 
+                    .listOfCats
+                        .catForSale
+                            .catInfo
+                                width: 400px
+                                .catDescription
+                                    h2
+                                        font-size: 18px
+                                    p
+                                        max-width: 180px
+                                        font-size: 14px
+                            .catPriceCreator
+                                width: 210px
+                                .far
+                                    right: 5px
+                                .quantityAndPrice
+                                    padding-left: 10px
+                                    width: auto
+                                    .quantity
+                                        button
+                                            height: 30px
+                                            width: 30px
+                                        button, p
+                                            margin-top: 55px
+                                    .priceForRow
+                                        right: 0
+                                        
+@media (max-width: 650px)
+    body
+        #root 
+            .MainComponent
+                .cartWindow
+                    form
+                        width: 100%
+                        padding: 5px
+                        .formCell 
+                            p
+                                overflow-wrap: break-word
+                                font-size: 18px
+                        button
+                            left: 50%
+                            transform: translateX(-50%)
+                    .listOfCats
+                        .catForSale
+                            .catInfo
+                                .catDescription
+                                    padding: 10px
+                                    h2
+                                        font-size: 16px
+                                    p
+                                        max-width: 150px
+                                        font-size: 12px
+                                img
+                                    height: 80px
+                                    width: 80px
+                                    margin: 20px 0 0 0
+                            .catPriceCreator
+                                width: 130px
+                                .far
+                                    right: 20px
+                                    top: 65%
+                                .quantityAndPrice
+                                    padding: 0
+                                    .quantity
+                                        display: block
+                                        text-align: center
+                                        button,p
+                                            margin-top: 25px
+                                    .priceForRow
+                                        display: block
+                                        top: 70%
+                                        right: 50%
+@media (max-width: 450px)
+    body
+        #root 
+            .MainComponent
+                header
+                    height: 400px
+                    h1
+                        letter-spacing: 1px
+                        font-size: 24px
+                    img
+                        width: 200px
+                .cartWindow 
+                    top: 150px
+                    width: 100%
+                    .listOfCats
+                        .catForSale
+                            margin: 0
+                            width: 220px
+                            width: 100%
+                            height: 160px
+                            .catInfo
+                                text-align: center
+                                display: block
+                                width: 100%
+                                height: 100px
+                                img
+                                    margin: 10px 0 0 0 
+                                .catDescription
+                                    padding: 0 0 0 5px
+                                    h2
+                                        width: 100px
+                                        overflow-wrap: break-word
+                                        padding: 5px 0
+                                        font-size: 16px
+                                    p
+                                        max-width: 120px
+                                        font-size: 11px
+                            .catPriceCreator
+                                text-align: center
+                                position: relative
+                                display: block
+                                height: 60px
+                                width: 100%
+                                .far
+                                    top: 30px
+                                .quantityAndPrice
+                                    height: 60px
+                                    margin: 0
+                                    border: none
+                                    .quantity, .priceForRow
+                                        display: inline-block
+                                        width: 50%
+                                        text-align: center
+                                    .priceForRow
+                                        font-size: 18px
+                                        position: relative
+                                        top: 0
+                                        right: 0
+                                        transform: translateY(0)
+@media (max-width: 450px)
+    body
+        #root 
+            .MainComponent
+                .cartWindow
+                    form
+                        .formCell
+                            margin: 20px 0
+                            text-align: center
+                            p, input, select
+                                width: 80%
+                            p
+                                font-size: 16px
+                        button
+                            top: 330px
+    
+    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
